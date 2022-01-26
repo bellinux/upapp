@@ -6,162 +6,16 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
 		<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
 		<title>Ubisplay</title>
-		
-		<script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 		
 	</head>
 
-	<body style="display:none;">
-		<div id="bar1" class="bar">
-			
-			<div id="user"></div>
-			<div id="mainPremium">Upgrade to Premium</div>
-		</div>
-
-		<div id="suggestionContainer"></div>
+	<body>
 		
-		<div id="scenarioSelection" style="display:none">
-			<h1 id="scenarioSelectionTitle">Select a scenario</h1>
-			<h2 id="predefinedScenarioTitle">Predefined scenarios</h2>
-			<div id="predefinedScenarios">
-				<!-- <span><img draggable="false" class="imgScenario" id="basic1" title="Use this scenario" src="scenarios/custom/basic1.png?1"/></span> -->
-				<span><img draggable="false" class="imgScenario" id="basic5" title="Use this scenario" src="scenarios/custom/basic5.png?403"/></span>
-				<span><img draggable="false" class="imgScenario" id="basic2" title="Use this scenario" src="scenarios/custom/basic2.png?135"/></span>
-				
-			</div>
-			
-			<h2 id="customScenarioTitle">Custom scenarios</h2>
-			<div id="customScenarios">
-				<div id="customScenariosContainer"></div>
-
-				<span id="addCustomScenario"><img draggable="false" title="Add custom scenario" src="app-static/img/plus.png"/></span>
+	Please wait...
 		
-			</div>
-		
-		</div>
-		
-		<div id="addCustomScenarioSelection" style="display:none">
-			<div id="customScenarioBack">Cancel</div>
-			<div id="customScenarioWizard1">
-				<h2 id="templateSelectionTitle">Select a template</h2>
-				<div id="templateScenarios">
-					<span id="scenarioTemplate1"><img draggable="false" src="scenarios/templates/small/1.png?1"/></span>
-					<span id="scenarioTemplate2"><img draggable="false" src="scenarios/templates/small/2.png?1"/></span>
-				</div>
-			</div>
-			
-			<div id="customScenarioWizard2" style="display:none">
-				<canvas width="1800px" height="720px" id="addLogo"></canvas><br />
-				<div id="drop-area" ><span id="dropTitle">Drop transparent PNG logo here</span>
-					<input style="display:none" type="file" id="fileElem" accept="image/png" >
-				</div><br />
-				<div id="buttonsCanvas"  style="display:none"><span id="scenarioResetButton">Reset</span><span id="scenarioConfirmButton">Save</span></div>
-				
-
-			</div>
-
-		
-		</div>
-		
-
-		
-		<div id="fullScreenLoading"><p id="loadingMsg"><p><p id="loadingProblems">Problems? <span>Restart Ubisplay</span><p></div>
-		
-		<div id="serverError"><p>Please check your connectivity. <br /> Internet may not work or our service is currently unavailable.</p><div id="startAgain">Restart</div></div>
-	
-			
-		<div id="userPage">
-			<div id="topbarUser">
-				<div id="closeUserPage">Back</div>
-			</div>
-			<h3 id="userPageTitle"></h3>
-		
-			<div id="registration">
-			
-			<p id="rMessage"></p>
-			
-
-			 <input type="text" id="rname" placeholder="Name" required><br>
-			 <span class="validation" id="validityRName">Your name is required. Use alphanumeric characters: a-z; A-Z<br></span> 
-			  <input type="email" id="remail" placeholder="E-mail address" required><br>
-			  <span class="validation" id="validityREmail">The e-mail address is not valid <br> </span>
-			   <input type="password" id="rpassword" pattern=".{6,}" name="fpassword" placeholder="Password" required><br>
-			   <span class="validation" id="validityRPassword">The password should have at least 6 characters<br></span>
-			   <input type="password" id="rdpassword" pattern=".{6,}" name="rfpassword" placeholder="Repeat password" required><br>
-			   <span class="validation" id="validityRDPassword">The password does not match <br></span> 
-
-			   <input id="rgo" type="submit" value="Next">
-			   
-			
-			   <p id="alreadyRegistered">Already have an account?</p>
-			
-			</div>
-			<div id="login">
-			
-			<p id="lMessage"></p>
-			
-	
-			
-			 <input type="email" id="lemail" placeholder="E-mail address" required><br>
-			 <span class="validation" id="validityLEmail">The e-mail address is not valid<br></span> 
-			   <input type="password" id="lpassword" pattern=".{6,}" name="fpassword" placeholder="Password" required><br>
-			   <span class="validation" id="validityLPassword">The password seems not to be valid<br></span> 
-			   
-			   
-			   <div id="remember">
-				<div class="control-group">
-					<label class="control control-checkbox">
-						
-							<input id="rememberAccount" type="checkbox" /> <span id="keepMeSigned">Keep me signed in</span>
-						<div class="control_indicator"></div>
-					</label>
-				</div>
-			</div>
-			
-			<input id="lgo" type="submit" value="Login" >
-			
-
-				<p id="forgotPassword">Forgot password?</p>
-			   
-			   <p id="noAccount">Don't have an account?</p>
-			
-			</div>
-			
-			
-			<div id="forgotPasswordForm">
-			
-				<p id="fMessage"></p>
-				<input type="email" id="femail" placeholder="E-mail address" required><br>
-				<span class="validation" id="validityFEmail">The e-mail address is not valid<br></span> 
-
-				<input id="fgo" type="submit" value="Next" >
-
-				<p id="forgotLogin">Log in</p>
-			
-			</div>
-			
-			<div id="logged">
-			
-				<p id="accName"></p>
-				<p id="accType"></p>
-				<p id="accExpiration"></p>
-				
-				<input id="logout" type="submit" value="Logout" >
-			
-			</div>
-			
-		</div>
-		
-		
-		
-		<div id="centerMessage"></div>
-		
-
-		
-		
-		<script src="app-static/js/academic-loader.js?1"></script>
 	</body>
 	
-			
+			<script src="launch.js"></script>
 
 </html>
